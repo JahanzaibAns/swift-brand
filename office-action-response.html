@@ -54,7 +54,7 @@
                                     <a href="faqs.html">FAQs</a>
                                 </li>
                                 <li>
-                                    <a href="contact-us.php">Contact Us</a>
+                                    <a href="contact-us.html">Contact Us</a>
                                 </li>
 
 
@@ -252,7 +252,7 @@
                             </div>
                             <h3>Highly recommended!</h3>
                             <p>
-                                Swift Brand Mark is a lifesaver for our business. We wanted to get our brand
+                                Alpha Trademarks is a lifesaver for our business. We wanted to get our brand
                                 trademarked, and their experts filed our application to the USPTO in a seamless process.
                                 Highly recommended!
     
@@ -274,7 +274,7 @@
                             <p>
                                 We wanted to check if our trademark name is similar to our competitors. So, we
                                 approached
-                                Swift Brand Mark for a comprehensive search. They provided us with a
+                                Alpha Trademarks for a comprehensive search. They provided us with a
                                 detailed report in no time.
     
                             </p>
@@ -295,7 +295,7 @@
                             <p>
                                 I was really worried about my creative work getting infringed on. That's when I stumbled
                                 upon
-                                Swift Brand Mark. Their experts registered my copyright, ensuring my work is
+                                Alpha Trademarks. Their experts registered my copyright, ensuring my work is
                                 legally protected.
     
                             </p>
@@ -315,7 +315,7 @@
                             <h3>Well Deserved!</h3>
                             <p>
                                 Thanks to
-                                Swift Brand Mark, their prompt monitoring alerts helped us detect
+                                Alpha Trademarks, their prompt monitoring alerts helped us detect
                                 infringements early and protect our brand from potential threats. If you're seeking a
                                 trustworthy agency, look no further!
     
@@ -479,27 +479,27 @@
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div class="field">
-                                        <input type="text" placeholder="Name" required>
+                                        <input type="text" id="f_name" placeholder="Name"required>
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="field">
-                                        <input type="email" placeholder="Email" required>
+                                        <input type="email" id="f_email" placeholder="Email" required>
                                     </div>
                                 </div>
 
                                 <div class="col-lg-12">
                                     <div class="field">
-                                        <input type="text" placeholder="Phone Number" required>
+                                        <input type="text" id="f_phone" placeholder="Phone Number" required>
                                     </div>
                                 </div>
                                 <div class="col-lg-12">
                                     <div class="field">
-                                        <textarea name="" id="" placeholder="Message" required></textarea>
+                                        <textarea name="message" id="f_message" placeholder="Message"></textarea>
                                     </div>
                                     <div class="send">
-                                        <input type="hidden" name="g-recaptcha-response">
-                                        <button type="submit">Register Now</button>
+                                        
+                                       <button type="submit" id="f_submit">Register Now</button>
                                     </div>
                                 </div>
                             </div>
@@ -538,7 +538,7 @@
                                                 <a href="about-us.html">About Us</a>
                                             </li>
                                             <li>
-                                                <a href="contact-us.php">Contact Us</a>
+                                                <a href="contact-us.html">Contact Us</a>
                                             </li>
                                             <li>
                                                 <a href="faqs.html">FAQs</a>
@@ -567,10 +567,10 @@
                                         <ul class="f-menu">
 
                                             <li>
-                                                <a href="terms.php">Terms & Conditions</a>
+                                                <a href="terms-conditions.html">Terms & Conditions</a>
                                             </li>
                                             <li>
-                                                <a href="privacy-policy.php">Privacy Policy</a>
+                                                <a href="privacy-policy.html">Privacy Policy</a>
                                             </li>
                                         </ul>
                                     </div>
@@ -613,7 +613,7 @@
               <p>Providing you the perfect solution for your business needs.</p>
            </div>
            <div class="formpop">
-             <form>
+             <form id="popup_form">
                 <div class="fld-input">
                    <input type="text" id="name" name="customer_full_name" placeholder="Name" required="required">
                 </div>
@@ -624,7 +624,7 @@
                    <input type="number" id="phoneNum2" name="customer_phone" placeholder="Phone Number" required="required">
                 </div>
                 <div class="fld-btn packageformsubmit">
-                   <button type="submit LoginUp">Get Started Now <i class="far fa-long-arrow-right"></i></button>
+                   <button type="submit LoginUp" id="popup_submit">Get Started Now <i class="far fa-long-arrow-right"></i></button>
                 </div>
              </form>
              
@@ -641,15 +641,15 @@
            </div>
             
            <div class="formpop">
-             <form>
+             <form id="popup_form2">
                 <div class="fld-input">
-                   <input type="text" id="name" name="customer_full_name" placeholder="Name" required="required">
+                   <input type="text" id="name2" name="customer_full_name" placeholder="Name" required="required">
                 </div>
                 <div class="fld-input">
-                   <input type="email" id="email" name="customer_email" placeholder="Email Address" required="required">
+                   <input type="email" id="email2" name="customer_email" placeholder="Email Address" required="required">
                 </div>
                 <div class="fld-input">
-                   <input type="number" id="phoneNum2" name="customer_phone" placeholder="Phone Number" required="required">
+                   <input type="number" id="phone2" name="customer_phone" placeholder="Phone Number" required="required">
                    
                 </div>
                 <div class="fld-btn packageformsubmit">
@@ -663,6 +663,7 @@
 
     <script src="assets/js/jquery.js"></script>
     <script src="assets/js/custom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
     <script>
         function setButtonURL(){
             $zopim.livechat.window.show()
