@@ -418,59 +418,84 @@ $(document).on('click', '.srch-btn', function() {
 });
 
 
-    // Function to save data and redirect
-    const saveDataAndRedirect = () => {
-        const firstName = $("#f_name").val();
-        const email = $("#f_email").val();
-        const phoneNo = $("#f_phone").val();
-        const description = $("#f_message").val();
+  // Function to save data and redirect
+  const saveDataAndRedirect = (formId, fields) => {
+    const firstName = $(`#${fields.firstName}`).val();
+    const email = $(`#${fields.email}`).val();
+    const phoneNo = $(`#${fields.phoneNo}`).val();
+    const description = $(`#${fields.description}`).val();
 
-        const dataToStore = { firstName, email, phoneNo, description };
-        
-        // Show loader
-        $("#f_submit").html('Registering... <i class="fa fa-spinner fa-spin"></i>');
+    const dataToStore = { firstName, email, phoneNo, description };
 
-        // Call the API to send data
-        sendDataToAPI(dataToStore, () => {
-            // Callback: Redirect to 'four-steps-form.html' after API call is complete
-            // window.location.href = 'https://alphatrademarks.com/thankyou-stepper.html';
-        });
+    // Show loader
+    $(`#${fields.submit}`).html('Registering... <i class="fa fa-spinner fa-spin"></i>');
+
+    // Call the API to send data
+    sendDataToAPI(dataToStore, () => {
+        // Callback: Redirect to 'thank you' page after API call is complete
+        // window.location.href = 'https://alphatrademarks.com/thankyou-stepper.html';
+    });
+};
+
+const sendDataToAPI = (data, fields, callback) => {
+    const apiUrl = 'https://backend-develop.thecoredesigns.com/trade-mark/deluxe-atm';
+
+    // Prepare the data for the API request
+    const apiData = {
+        firstName: data.firstName,
+        phoneNo: data.phoneNo,
+        email: data.email,
+        description: data.description
     };
 
-    const sendDataToAPI = (data, callback) => {
-        const apiUrl = 'https://backend-develop.thecoredesigns.com/trade-mark/deluxe-atm';
+    // Make a POST request to the API with JSON data in the body
+    $.ajax({
+        url: apiUrl,
+        type: 'POST',
+        contentType: 'application/json',
+        data: JSON.stringify(apiData),
+        success: function (response) {
+            console.log('API response:', response);
+            // Handle the API response if needed
+            callback(); // Call the callback after API is complete
+        },
+        error: function (error) {
+            console.error('Error sending data to API:', error);
+            // Handle errors if needed
+            // Hide loader and show error message
+            $(`#${fields.submit}`).html('Register Now');
+        }
+    });
+};
 
-        // Prepare the data for the API request
-        const apiData = {
-            firstName: data.firstName,
-            phoneNo: data.phoneNo,
-            email: data.email,
-            description: data.description
-        };
-
-        // Make a POST request to the API with JSON data in the body
-        $.ajax({
-            url: apiUrl,
-            type: 'POST',
-            contentType: 'application/json',
-            data: JSON.stringify(apiData),
-            success: function (response) {
-                console.log('API response:', response);
-                // Handle the API response if needed
-                callback(); // Call the callback after API is complete
-            },
-            error: function (error) {
-                console.error('Error sending data to API:', error);
-                // Handle errors if needed
-                // Hide loader and show error message
-                $("#f_submit").html('Register Now');
-            }
-        });
+$(document).ready(function () {
+    // Define form details
+    const forms = {
+        form4: {
+            firstName: 'f_name',
+            email: 'f_email',
+            phoneNo: 'f_phone',
+            description: 'f_message',
+            submit: 'f_submit'
+        },
+        popup_form: {
+            firstName: 'name',
+            email: 'email',
+            phoneNo: 'phoneNum2',
+            submit: 'popup_submit'
+        },
+        popup_form2: {
+            firstName: 'name2',
+            email: 'email2',
+            phoneNo: 'phone2',
+            submit: 'popup_submit2'
+        }
     };
 
-    $(document).ready(function () {
-        // Initialize form validation
-        $("#form4").validate({
+    // Initialize form validation for each form
+    Object.keys(forms).forEach(formId => {
+        const fields = forms[formId];
+        $(`#${formId}`).validate({
             rules: {
                 firstName: "required",
                 email: {
@@ -493,7 +518,8 @@ $(document).on('click', '.srch-btn', function() {
                 event.preventDefault();
 
                 // Form is valid, call the API and redirect
-                saveDataAndRedirect();
+                saveDataAndRedirect(formId, fields);
             }
         });
     });
+});
