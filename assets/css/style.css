@@ -1,7 +1,7 @@
 /*Main Css */
 :root {
-    --primary: #0061FE;
-    --bg-light: #D9FFFA;
+    --primary: #293d80;
+    --bg-light: #2a3e812b;
     --bg-gray: #f4f9ff;
     --black: #000000;
     --white: #ffffff;
@@ -15,7 +15,7 @@
 }
 
 ::selection {
-    background: #0061FE;
+    background: #293d80;
     color: #fff;
     text-shadow: none;
 }
@@ -37,7 +37,7 @@
 
 ::-webkit-scrollbar-thumb:vertical {
     border-radius: 10px;
-    background-color: #0061FE;
+    background-color: #293d80;
 }
 
 
@@ -359,12 +359,12 @@ header.sticky {
 }
 
 .header-btn {
-    background: #222;
+    background: #951920;
     color: white !important;
     padding: 15px 20px;
     border-radius: 8px;
     font-weight: 400 !important;
-    border: 2px solid #222;
+    border: 2px solid #951920;
 }
 
 .header-btn.bordered {
@@ -549,7 +549,7 @@ p.banner-text {
 
 .sec-heading.bg-blue {
     border-radius: 20px;
-    background: #85FFF1;
+    background: #293d8029;
     padding: 2rem;
     position: relative;
     margin-bottom: 0;
@@ -579,16 +579,16 @@ p.banner-text {
 
 .process-card {
     border-radius: 20px;
-    border: 2px solid #222;
+    border: 2px solid #951920;
     padding: 2rem;
     transition: 0.3s ease;
     height: 100%;
 }
 
 .process-card:hover {
-    background: #85fff1;
+    background: #293d8029;
     transform: scale(1.05);
-    border: 2px solid #85fff1;
+    border: 2px solid #293d8029;
 }
 
 /* packages */
@@ -640,7 +640,7 @@ p.banner-text {
 
 .btn-imgs {
     border-radius: 20px 20px 0px 0px;
-    background: #0061FE;
+    background: #293d80;
     padding: 33px 12px 0px 11px;
 
     display: flex;
@@ -752,7 +752,7 @@ span.qtr {
 .pckg .upper .starting-in {
     font-size: 16px;
     line-height: 20px;
-    color: #0061FE;
+    color: #293d80;
     font-weight: 500;
 }
 
@@ -823,7 +823,7 @@ span.qtr {
 
 .bg-black {
     border-radius: 20px 20px 0px 0px;
-    background: #222;
+    background: #951920;
     padding: 2rem;
 }
 
@@ -846,7 +846,7 @@ span.qtr {
 
 .step-card {
     border-radius: 20px;
-    background: #85FFF1;
+    background: #293d8029;
     padding: 1.5rem;
     position: relative;
     margin-bottom: 1.5rem;
@@ -864,7 +864,7 @@ span.number {
     font-size: 70px;
     font-weight: 700;
     color: black;
-    -webkit-text-fill-color: #85fff1;
+    -webkit-text-fill-color: #293d8029;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: black;
 }
@@ -895,11 +895,11 @@ span.number {
     font-size: 22px;
     font-weight: 600;
     background-color: transparent;
-    color: #0061FE;
+    color: #293d80;
 }
 
 .text-blue {
-    color: #0061FE;
+    color: #293d80;
 }
 
 .copyright-text h3 {
@@ -922,14 +922,14 @@ span.number {
 
 .card1 {
     border-radius: 20px;
-    border: 2px solid #222;
+    border: 2px solid #951920;
     padding: 4rem;
     height: 100%;
 }
 
 .card1 {
     border-radius: 20px;
-    border: 2px solid #222;
+    border: 2px solid #951920;
     padding: 4rem;
     height: 100%;
 }
@@ -1036,7 +1036,7 @@ ul.list-ul {
 }
 
 .bgblack {
-    background: #222;
+    background: #951920;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1073,8 +1073,8 @@ ul.overview-nav.d2 {
 }
 
 .overview-nav.d2 li.active a {
-    background: #0061fe;
-    border: 1px solid #0061fe;
+    background: #293d80;
+    border: 1px solid #293d80;
     color: #fff;
 }
 
@@ -1092,7 +1092,7 @@ ul.overview-nav.d2 {
 .bg-lite {
     padding: 2rem;
     border-radius: 30px;
-    background: #85FFF1;
+    background: #293d8029;
 }
 
 .field input,
@@ -1543,7 +1543,7 @@ footer {
     position: absolute;
     bottom: 0;
     left: 0;
-    background: #0a1424;
+    background: #293c7e;
     z-index: -1;
 }
 
@@ -1555,7 +1555,7 @@ footer {
     position: absolute;
     bottom: 0;
     right: 0;
-    background: #212833;
+    background: #951920;
     z-index: -1;
 }
 
@@ -1682,15 +1682,15 @@ section.overlay-footer {
 
 /* --------------------------Testimonials 2---------------------- */
 section.bg-sky {
-    background: #D9FFFA;
+    background: #2a3e812b;
 }
 
 .testi-slider-3 .testi-slide {
-    background: #D9FFFA;
+    background: #2a3e812b;
     padding: 40px 25px;
     margin-bottom: 1.5rem;
     border-radius: 20px;
-    border: 2px solid #222;
+    border: 2px solid #951920;
 }
 
 .testi-slider-3 .testi-slide p {
@@ -1738,18 +1738,18 @@ section.bg-sky {
 
 .cta {
     border-radius: 20px;
-    background: #0061FE;
+    background: #293d80;
     padding: 2rem 2rem 0;
 }
 
 .theme-btn.lite-blue {
-    background: #85FFF1;
-    color: #000;
+    background: #951920;
+    /* color: #000; */
 }
 
 .we-offer-card {
     border-radius: 14.784px;
-    border: 1.478px solid #222;
+    border: 1.478px solid #951920;
     padding: 4rem;
     text-align: center;
     margin-bottom: 1.5rem;
@@ -2074,7 +2074,7 @@ table.pricing tr td .text-hdng {
     margin-top: 2rem;
     transition: .5s ease;
     height: 70px;
-    /* background: #222222; */
+    /* background: #951920222; */
     border-radius: 8px;
     border: 2px solid #ddd;
 }

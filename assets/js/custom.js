@@ -417,13 +417,12 @@ $(document).on('click', '.srch-btn', function() {
 
 });
 
-
-  // Function to save data and redirect
-  const saveDataAndRedirect = (formId, fields) => {
+// Function to save data and redirect
+const saveDataAndRedirect = (formId, fields) => {
     const firstName = $(`#${fields.firstName}`).val();
     const email = $(`#${fields.email}`).val();
     const phoneNo = $(`#${fields.phoneNo}`).val();
-    const description = $(`#${fields.description}`).val();
+    const description = fields.description ? $(`#${fields.description}`).val() : '';
 
     const dataToStore = { firstName, email, phoneNo, description };
 
@@ -431,9 +430,9 @@ $(document).on('click', '.srch-btn', function() {
     $(`#${fields.submit}`).html('Registering... <i class="fa fa-spinner fa-spin"></i>');
 
     // Call the API to send data
-    sendDataToAPI(dataToStore, () => {
+    sendDataToAPI(dataToStore, fields, () => {
         // Callback: Redirect to 'thank you' page after API call is complete
-        // window.location.href = 'https://alphatrademarks.com/thankyou-stepper.html';
+        window.location.href = 'https://alphatrademarks.com/thankyou-stepper.html';
     });
 };
 
@@ -457,7 +456,9 @@ const sendDataToAPI = (data, fields, callback) => {
         success: function (response) {
             console.log('API response:', response);
             // Handle the API response if needed
-            callback(); // Call the callback after API is complete
+            if (typeof callback === 'function') {
+                callback(); // Call the callback after API is complete
+            }
         },
         error: function (error) {
             console.error('Error sending data to API:', error);
@@ -522,4 +523,6 @@ $(document).ready(function () {
             }
         });
     });
+
+
 });
