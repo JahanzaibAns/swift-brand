@@ -8,6 +8,9 @@
     <link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon">
     <link rel="icon" href="assets/images/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="assets/css/layouts.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
@@ -330,9 +333,31 @@
         </div>
     </div>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
     <script src="assets/js/jquery.js"></script>
     <script src="assets/js/custom.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+    <script id="ze-snippet"
+    src="https://static.zdassets.com/ekr/snippet.js?key=04dde84f-62e8-4d49-8aed-ae44713da678"> </script>
+    <!-- End of thecoredesigns2034 Zendesk Widget script -->
+    <script>
+    zE(function () {
+        zE.activate();
+    });
+    zE(function () {
+        $zopim(function () {
+            $zopim.livechat.setOnUnreadMsgs(unread);
+            function unread(number) {
+                if (number >= 1) {
+                    $zopim.livechat.window.show();
+                }
+            }
+        });
+    });
+    </script>
     <script>
         function setButtonURL(){
             $zopim.livechat.window.show()
